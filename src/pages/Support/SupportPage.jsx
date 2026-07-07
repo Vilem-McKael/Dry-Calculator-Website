@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 // import Footer from '../../components/Footer/Footer'
+import 'dotenv/config'
 
 export default function SupportPage() {
 
@@ -29,7 +30,7 @@ export default function SupportPage() {
 
       
       <div className='h-full w-full flex-col items-center'>
-      {!hasSubmitted && <form className='flex flex-col items-center justify-center py-12 w-full px-8' action='https://formspree.io/f/mrewdaln' name='support' method='POST' data-netlify="true">
+      {!hasSubmitted && <form className='flex flex-col items-center justify-center py-12 w-full px-8' action={`${process.env.FORMURL}`} name='support' method='POST' data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <div className='flex flex-col items-start w-full max-w-[400px] [&_*]:w-full [&_label]:mb-1 space-y-4'>
           <div className='flex flex-col'>
