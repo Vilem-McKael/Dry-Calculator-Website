@@ -5,7 +5,7 @@ export default function AboutPage() {
     <div className='w-full flex flex-col items-center'>
       <div className='w-full pt-8 px-8 md:w-[800px] [&>*]:mb-6'>
         <div className='text-[2rem] mb-4'>
-          Vouch.vm
+          Dry Calculator
         </div>
         {/* <div className='text-[1.5rem]'>
           Share The Media That Inspires You; Find New Inspiration

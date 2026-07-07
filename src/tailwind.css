@@ -5,10 +5,27 @@
 @tailwind utilities;
 
 :root {
-  color: ivory;
-  background-color: #060606; 
+  color: #FEFFFF;
+  background-color: #2A2A2D; 
   background-size: cover;
   background-position: center;
+}
+
+input, textarea {
+  background-color: #1A1A1D;
+  color: #FEFFFF;
+}
+
+.nav-icon {
+  width: 40px;
+  height: auto;
+}
+
+@media only screen and (max-width: 400px) {
+  .nav-icon {
+    width: 32px;
+    height: auto;
+  }
 }
 
 /* a {

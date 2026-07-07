@@ -13,26 +13,6 @@ export default function SupportPage() {
     message: ""
   })
 
-  // const handleSubmit = (event) => {
-  //   // event.preventDefault()
-
-  //   const contactForm = event.target;
-  //   const formData = new FormData(contactForm);
-  //   fetch('/contact', {
-  //     method: "POST",
-  //     headers: {"Content-Type": "application/x-www-form-urlencoded"},
-  //     body: new URLSearchParams(formData).toString()
-  //   })
-  //   .then(() => console.log("Form successfully submitted"))
-  //   .catch((error) => alert(error))
-
-  //   event.preventDefault()
-
-  //   setHasSubmitted(true)
-  // }
-
-  // document.querySelector("form").addEventListener("submit", handleSubmit)
-
   const handleChange = (event) => {
     setFormDetails({...formDetails, [event.target.name]: event.target.value})
   }
@@ -42,12 +22,14 @@ export default function SupportPage() {
       <div className='text-center text-2xl sm:text-4xl mt-16 font-bold'>
         Contact
       </div>
-      <div className='mx-8 md:max-w-full md:mx-16 mt-4 text-sm sm:text-base mobileLandscape:w-[400px] sm:w-[600px]'>
-        {hasSubmitted ? "Thank you for contacting me. I am working hard to make sure Vouch.vm is the best application it can be. I will get back to you as soon as I can!" : "Get in touch with the developer for access to the alpha, or regarding any bugs, crashes, any user interface issues, feature suggestions!"}
+      <div className='mx-8 md:max-w-full md:mx-16 mt-4 text-sm sm:text-base mobileLandscape:w-[400px] max-w-[400px] text-justify sm:text-center'>
+        {hasSubmitted ? "Thank you for contacting me, and for helping Dry Calculator be the best application it can be. I will get back to you as soon as I can!" : "Get in touch with the developer regarding any bugs, crashes, questions, or feature suggestions!"}
       </div>
+
+
       
       <div className='h-full w-full flex-col items-center'>
-      {!hasSubmitted && <form className='flex flex-col items-center justify-center py-12 w-full px-8 [&_input]:text-black [&_textarea]:text-black' action='https://formspree.io/f/mqeeybpb' name='contact' method='POST' data-netlify="true">
+      {!hasSubmitted && <form className='flex flex-col items-center justify-center py-12 w-full px-8' action='https://formspree.io/f/mrewdaln' name='support' method='POST' data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <div className='flex flex-col items-start w-full max-w-[400px] [&_*]:w-full [&_label]:mb-1 space-y-4'>
           <div className='flex flex-col'>
@@ -73,17 +55,24 @@ export default function SupportPage() {
           </label>
         
 
-          <textarea name='message' className='px-2 py-1 rounded-sm'>
+          <textarea name='message' className='px-2 py-1 rounded-sm min-h-28'>
           </textarea>
         </div>
         
         <div className=''>
-          <button type='submit' className='h-[40px] bg-black text-white mt-2 p-2 rounded-lg border border-green-500 transform hover:scale-110 duration-75'>
+          <button type='submit' className='h-[40px] bg-gradient-to-r from-[#FFBA10] to-[#FF7B00] text-[#1A1A1D] mt-2 p-2 rounded-lg border  transform hover:scale-110 duration-75'>
             <i className=''></i>Send
           </button>
         </div>
+
         </div>
+
+        <div className='pt-16'>
+          Or, feel free to send an e-mail to <a href='mailto:vilemmckael.dev@gmail.com' className='text-blue-500'>vilemmckael.dev@gmail.com</a>
+        </div>
+        
       </form>}
+      
       </div>
     </div>
   )
