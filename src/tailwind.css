@@ -23,9 +23,25 @@ input, textarea {
 
 @media only screen and (max-width: 400px) {
   .nav-icon {
-    width: 32px;
+    width: 28px;
     height: auto;
   }
+}
+
+.sectionHeader {
+  font-size: x-large;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-weight: bolder;
+  /* text-decoration: underline; */
+}
+
+h2 {
+  font-style: italic;
+}
+
+p {
+  font-size: medium;
 }
 
 /* a {

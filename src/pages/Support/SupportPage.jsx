@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { NetlifyForm, Honeypot } from 'react-netlify-forms'
 // import Footer from '../../components/Footer/Footer'
+import { MdOutlineMailOutline } from "react-icons/md";
+
 
 
 export default function SupportPage() {
@@ -23,7 +25,7 @@ export default function SupportPage() {
       <div className='text-center text-2xl sm:text-4xl mt-16 font-bold'>
         Contact
       </div>
-      <div className='mx-8 md:max-w-full md:mx-16 mt-4 text-sm sm:text-base mobileLandscape:w-[400px] max-w-[400px] text-justify sm:text-center'>
+      <div className='mx-8 md:mx-16 mt-4 text-sm sm:text-base mobileLandscape:w-[400px] max-w-[400px] text-justify'>
         {hasSubmitted ? "Thank you for contacting me, and for helping Dry Calculator be the best application it can be. I will get back to you as soon as I can!" : "Get in touch with the developer regarding any bugs, crashes, questions, or feature suggestions!"}
       </div>
 
@@ -68,8 +70,14 @@ export default function SupportPage() {
 
         </div>
 
-        <div className='pt-16'>
-          Or, feel free to send an e-mail to <a href='mailto:vilemmckael.dev@gmail.com' className='text-blue-500'>vilemmckael.dev@gmail.com</a>
+        <div className='mt-8 flex flex-col items-center justify-center text-center'>
+          <div>
+            Or, feel free to send an e-mail to
+          </div>
+          <a href='mailto:vilemmckael.dev@gmail.com' className='bg-blue-500 text-[#FEFFFF] px-4 py-2 rounded-md border border-white flex flex-row mt-2 hover:scale-110 duration-100'>
+            <MdOutlineMailOutline className='h-auto w-[24px] mr-4'/>
+            <div>vilemmckael.dev@gmail.com</div>
+          </a>
         </div>
         
       </form>}

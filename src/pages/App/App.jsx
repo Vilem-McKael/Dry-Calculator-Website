@@ -12,6 +12,8 @@ import LandingPage from '../Landing/LandingPage';
 import SupportPage from '../Support/SupportPage';
 import GalleryPage from '../Gallery/GalleryPage';
 import AboutPage from '../About/AboutPage';
+import PrivacyPage from '../Privacy/PrivacyPage';
+import TermsPage from '../Terms/TermsPage';
 
 function App() {
 
@@ -21,7 +23,9 @@ function App() {
       <div className='pt-[120px]'>
         <Routes>
           <Route path='/*' element={<LandingPage />} />
-          <Route path='/about' element={<AboutPage />} />
+          {/* <Route path='/about' element={<AboutPage />} /> */}
+          <Route path='/privacy' element={<PrivacyPage />} />
+          <Route path='/terms' element={<TermsPage />} />
           <Route path='/gallery' element={<GalleryPage />} />
           <Route path='/support' element={<SupportPage />} />
         </Routes>
