@@ -1,5 +1,6 @@
 import React from 'react'
 import dryCalcLogo from '../../assets/dryCalc.png'
+import appStoreButton from '../../assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg'
 
 
 export default function LandingPage() {
@@ -9,6 +10,11 @@ export default function LandingPage() {
             <img src={dryCalcLogo} className='w-[252px] h-[252px] md:w-[400px] md:h-[400px] rounded-[25px] md:rounded-[40px] border border-gray-400 drop-shadow-[0_0_25px_rgba(255,255,255,0.6)]'/>
             <div className='px-8 sm:px-20 max-w-[800px] text-start'>
               <h1 className='text-2xl sm:text-4xl text-center font-bold my-4 mt-8'>Dry Calculator</h1>
+              <div className='w-full flex justify-center'>
+                <a href='https://apps.apple.com/us/app/dry-calculator/id6755217788'>
+                  <img src={appStoreButton} className='w-[200px] h-auto'/>
+                </a>
+              </div>
               <h1 className='text-ivory mt-8 mb-12'>
                 There's something special about going exceptionally dry on a drop. At a certain point, many learn to wear their misfortune like a badge of honor - except, well, there's no badge. That's where Dry Calculator comes in.
               </h1>
